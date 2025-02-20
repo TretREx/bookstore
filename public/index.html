@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>校园二手书平台</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>📚 校园二手书交易平台</h1>
+  </header>
+
+  <main>
+    <!-- 书籍列表 -->
+    <section class="book-list">
+      <h2>在售书籍</h2>
+      <table id="bookTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>书名</th>
+            <th>作者</th>
+            <th>价格</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- 添加书籍 -->
+    <section class="add-book">
+      <h2>发布新书</h2>
+      <input type="text" id="title" placeholder="书名" required>
+      <input type="text" id="author" placeholder="作者" required>
+      <input type="number" id="price" step="0.01" min="0" placeholder="价格" required>
+      <input type="password" id="password" placeholder="管理密码" required>
+      <button onclick="addBook()">发布书籍</button>
+    </section>
+
+    <!-- 购买书籍 -->
+    <section class="buy-book">
+      <h2>立即购买</h2>
+      <input type="number" id="bookId" placeholder="书籍ID" required>
+      <input type="text" id="contact" placeholder="联系方式" required>
+      <input type="datetime-local" id="pickupTime" required>
+      <button onclick="buyBook()">确认购买</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
